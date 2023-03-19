@@ -13,12 +13,14 @@ const postdata = async (req, res) => {
 
 const viewdata = async (req, res) => {
   try {
-    let queryParam = req.query;
-    const view = await productschema.find({
-      // ratings: queryParam["rating"],
-      category: queryParam["category"],
+    // let queryParam = req.query;
+    // const view = await productschema.find({
+    //   // ratings: queryParam["rating"],
+    //   category: queryParam["category"],
+    // });
+    res.json({
+      donw: "yss",
     });
-    res.json(view);
   } catch (error) {
     res.json(error);
   }

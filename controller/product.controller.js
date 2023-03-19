@@ -22,5 +22,12 @@ const viewdata = async (req, res) => {
   } catch (error) {
     res.json(error);
   }
+  // const updatedate=async(req,res)=>{
+  //   try{
+  //     const updatedata=await productschema.findByIdAndUpdate(req.params.id{
+  //       $set:req
+  //     })
+  //   }
+  // }
 };
 module.exports = { postdata, viewdata };

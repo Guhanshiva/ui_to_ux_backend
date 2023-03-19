@@ -18,9 +18,7 @@ const viewdata = async (req, res) => {
       // ratings: queryParam["rating"],
       category: queryParam["category"],
     });
-    res.json({
-      donw: "yss",
-    });
+    res.json(view);
   } catch (error) {
     res.json(error);
   }

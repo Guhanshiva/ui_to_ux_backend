@@ -15,10 +15,10 @@ mongoose
   });
 app.use(express.json());
 app.use(cors());
-// app.use("/api", router);
-app.use("/", (req, res) => {
-  res.json({ message: "Hello From Express App" });
-});
+app.use("/api", router);
+// app.use("/", (req, res) => {
+//   res.json({ message: "Hello From Express App" });
+// });
 
 app.listen(2023, () => {
   console.log("Server Is Running On", port);

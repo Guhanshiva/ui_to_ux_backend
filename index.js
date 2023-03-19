@@ -11,7 +11,7 @@ mongoose
     console.log("DB is connected");
   })
   .catch(() => {
-    console.log("DB is not connected");
+    console.log("DB is not connected !!");
   });
 app.use(express.json());
 app.use(cors());

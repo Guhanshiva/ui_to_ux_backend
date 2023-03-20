@@ -22,12 +22,27 @@ const viewdata = async (req, res) => {
   } catch (error) {
     res.json(error);
   }
-  // const updatedate=async(req,res)=>{
-  //   try{
-  //     const updatedata=await productschema.findByIdAndUpdate(req.params.id{
-  //       $set:req
-  //     })
-  //   }
-  // }
 };
-module.exports = { postdata, viewdata };
+
+const updatedata = async (req, res) => {
+  try {
+    const updateddata = await productschema.findByIdAndUpdate(
+      req.params.id,
+      { $set: req.body },
+      { new: true }
+    );
+    res.json({ msg: "Updated Data Successfully", data: updateddata });
+  } catch (error) {
+    res.json(error);
+  }
+};
+
+const deletedata = async (req, res) => {
+  try {
+    const deleteddata = await productschema.findByIdAndDelete(req.params.id);
+    res.json({ msg: "Deleted Data Successfully", data: deleteddata });
+  } catch (error) {
+    res.json(error);
+  }
+};
+module.exports = { postdata, viewdata, updatedata, deletedata };

@@ -21,5 +21,5 @@ app.use("/api", router);
 // });
 
 app.listen(2023, () => {
-  console.log("Server Is Running On", port);
+  console.log("Server Is Running On", 2023);
 });

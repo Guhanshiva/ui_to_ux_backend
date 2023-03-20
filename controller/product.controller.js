@@ -10,7 +10,13 @@ const postdata = async (req, res) => {
     res.json(error["errors"]["category"]["message"]);
   }
 };
-
+const healthcheck = async (req, res) => {
+  try {
+    res.json("message : Hello UITOUX TEAM ");
+  } catch (error) {
+    res.json(error);
+  }
+};
 const viewdata = async (req, res) => {
   try {
     let queryParam = req.query;
@@ -45,4 +51,4 @@ const deletedata = async (req, res) => {
     res.json(error);
   }
 };
-module.exports = { postdata, viewdata, updatedata, deletedata };
+module.exports = { postdata, viewdata, updatedata, deletedata, healthcheck };
